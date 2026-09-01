@@ -106,7 +106,7 @@ const ListItem = ({ title, description, icon: Icon, href }) => (
 );
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(null); // 'services' | 'company' | null
+  const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);

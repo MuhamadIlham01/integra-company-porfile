@@ -7,7 +7,6 @@ const Footer = () => {
     <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-12">
-          {/* Kiri: Logo + Nama PT */}
           <div className="flex flex-col items-start">
             <Link to="/" className="flex items-center gap-4">
               <img
@@ -19,14 +18,8 @@ const Footer = () => {
                 PT. Integra Mesin Global
               </span>
             </Link>
-
-            <p className="text-base leading-relaxed text-gray-600 mt-5 text-justify">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-            </p>
           </div>
 
-          {/* Tengah: Navigasi */}
           <div className="flex flex-col items-start md:items-center">
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Navigasi
@@ -71,13 +64,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Kanan: Alamat, Email, No. Kontak */}
           <div className="flex flex-col items-start md:items-end">
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Hubungi Kami
             </p>
 
-            <ul className="mt-6 space-y-4 md:text-right">
+            <ul className="mt-6 space-y-4 text-right">
               <li className="text-base text-gray-600">
                 Ruko niaga Kalimas jl.inspeksi saluran Kalimalang blok B18
                 Jatimulya ,kec Tambun Selatan kab.bekasi ,Jawa Barat 1751

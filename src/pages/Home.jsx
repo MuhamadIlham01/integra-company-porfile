@@ -3,6 +3,7 @@ import Navbar from "../components/layout/NavBar";
 const Home = () => {
   return (
     <div>
+      <Navbar />
       <Footer />
     </div>
   );
