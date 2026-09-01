@@ -1,8 +1,11 @@
-
+import Footer from "../components/layout/Footer";
+import Navbar from "../components/layout/NavBar";
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Footer />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

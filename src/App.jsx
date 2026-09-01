@@ -1,9 +1,25 @@
 import "./App.css";
+import { Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
+import Services from "./pages/Services";
+import Footer from "./components/layout/Footer";
+import Navbar from "./components/layout/NavBar";
 
 function App() {
   return (
     <>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/navbar" element={<Navbar />} />
+      </Routes>
     </>
   );
 }
