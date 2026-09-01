@@ -1,11 +1,12 @@
-
-import NavBar from './../components/layout/NavBar';
+import Footer from "../components/layout/Footer";
+import Navbar from "../components/layout/NavBar";
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      <Navbar />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
