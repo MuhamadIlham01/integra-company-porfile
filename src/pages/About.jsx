@@ -1,7 +1,10 @@
+import NavBar from "../components/layout/NavBar"
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <NavBar />
+    </div>
   )
 }
 
