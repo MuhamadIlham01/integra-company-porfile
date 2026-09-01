@@ -1,8 +1,11 @@
+import NavBar from "./../components/layout/NavBar";
 
 const Services = () => {
   return (
-    <div>Services</div>
-  )
-}
+    <div>
+      <NavBar />
+    </div>
+  );
+};
 
-export default Services
+export default Services;

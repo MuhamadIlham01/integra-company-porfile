@@ -1,7 +1,10 @@
+import NavBar from "../components/layout/NavBar"
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <div>
+      <NavBar />
+    </div>
   )
 }
 

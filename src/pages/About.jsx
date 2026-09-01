@@ -1,5 +1,11 @@
+import NavBar from "../components/layout/NavBar"
+
 const About = () => {
-  return <div>apaan ge</div>;
-};
+  return (
+    <div>
+      <NavBar />
+    </div>
+  )
+}
 
 export default About;
