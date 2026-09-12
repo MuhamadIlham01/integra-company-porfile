@@ -4,9 +4,9 @@ import logo from "../../assets/logo.jpeg";
 
 const navItems = [
   { label: "Home", to: "/" },
-  { label: "Tentang", to: "/about" },
-  { label: "Produk", to: "/products" },
-  { label: "Layanan", to: "/services" },
+  { label: "About", to: "/about" },
+  { label: "Products", to: "/products" },
+  { label: "Services", to: "/services" },
 ];
 
 const NavBar = () => {
@@ -14,45 +14,43 @@ const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 24);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed inset-s-0 top-0 z-20 w-full transition-all duration-300 ${
+      className={`fixed inset-s-0 top-0 z-20 w-full transition-colors duration-300 ${
         isScrolled
-          ? "border-[#A8B4BE]/30 bg-white/95 shadow-md backdrop-blur-md"
-          : "border-white/15 bg-transparent"
+          ? "border-b border-black/10 bg-white shadow-md backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4 md:p-2">
         <NavLink
           to="/"
           className="flex items-center gap-3 transition-transform duration-300 ease-out hover:scale-[1.03]"
         >
           <img
             src={logo}
-            className="h-11 w-11 object-contain rounded-xl"
+            className="h-11 w-11 object-contain rounded-full"
             alt="Integra Mesin Global Logo"
           />
           <div className="flex flex-col leading-none">
             <span
               className={`text-lg font-semibold tracking-tight transition-colors duration-300 ${
-                isScrolled ? "text-[#0D2C5A]" : "text-[#F5F7F9]"
+                isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
               Integra Mesin
             </span>
             <span
-              className={`text-center text-xs font-medium tracking-[0.2em] transition-colors duration-300 text-[#1F5C8C] ${
-                isScrolled ? "text-[#1F5C8C]" : "text-gray-400"
+              className={`text-center text-xs font-medium tracking-[0.2em] transition-colors duration-300 ${
+                isScrolled ? "text-gray-500" : "text-gray-300"
               }`}
             >
               GLOBAL
@@ -65,16 +63,16 @@ const NavBar = () => {
             to="/contact"
             className="text-white bg-[#1F5C8C] hover:bg-[#0D2C5A] rounded-2xl cursor-pointer border border-transparent shadow-[0_6px_16px_rgba(13,44,90,0.18)] hover:shadow-[0_12px_28px_rgba(13,44,90,0.28)] hover:-translate-y-0.5 transition-all duration-300 ease-out font-medium leading-5 rounded-base text-sm px-6 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300"
           >
-            Hubungi Kami
+            Contact us
           </NavLink>
 
           <button
             type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className={`inline-flex h-10 w-10 items-center justify-center rounded-base p-2 text-sm transition-colors duration-300 md:hidden focus:outline-none focus:ring-2 ${
+            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-base md:hidden transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-neutral-tertiary ${
               isScrolled
-                ? "text-[#0D2C5A] hover:bg-[#A8B4BE]/15 focus:ring-[#1F5C8C]/30"
-                : "text-white hover:bg-white/10 focus:ring-white/40"
+                ? "text-gray-900 hover:bg-gray-100"
+                : "text-white hover:bg-white/10"
             }`}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
@@ -97,14 +95,14 @@ const NavBar = () => {
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
             isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          } w-full md:order-1 md:block md:max-h-none md:w-auto md:opacity-100`}
+          } w-full md:block md:max-h-none md:w-auto md:opacity-100 md:order-1`}
           id="navbar-sticky"
         >
           <ul
-            className={`mt-4 flex flex-col rounded-xl border p-4 font-medium shadow-[inset_0_1px_3px_rgba(0,0,0,0.08)] md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none ${
+            className={`flex flex-col p-4 mt-4 font-medium rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.08)] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:shadow-none ${
               isScrolled
-                ? "border-[#A8B4BE]/30 bg-[#F5F7F9]"
-                : "border-white/15 bg-[#0D2C5A]/95"
+                ? "border border-black/10 bg-white/95"
+                : "border border-white/20 bg-black/20 backdrop-blur-md"
             }`}
           >
             {navItems.map(({ label, to }) => (
@@ -113,16 +111,19 @@ const NavBar = () => {
                   to={to}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `navbar-link rounded px-3 py-2 md:p-0 ${
+                    `group relative block py-2 px-3 rounded transition-colors duration-300 md:p-0 ${
                       isActive
-                        ? "text-[#6DB8D3]"
+                        ? "text-[#1F5C8C]"
                         : isScrolled
-                          ? "text-[#0D2C5A] hover:text-[#1F5C8C]"
-                          : "text-[#F5F7F9] hover:text-[#6DB8D3]"
+                          ? "text-gray-900 hover:text-[#1F5C8C]"
+                          : "text-white hover:text-gray-200"
                     }`
                   }
                 >
-                  {label}
+                  <span className="relative">
+                    {label}
+                    <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-[#1F5C8C] transition-all duration-300 group-hover:w-full" />
+                  </span>
                 </NavLink>
               </li>
             ))}

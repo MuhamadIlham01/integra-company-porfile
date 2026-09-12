@@ -1,9 +1,12 @@
 import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/NavBar";
+import NavBar from "../components/layout/NavBar";
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <NavBar />
+      <main className="min-h-screen">
+        {/* page content */}
+      </main>
       <Footer />
     </div>
   );

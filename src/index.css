@@ -1,1 +1,70 @@
 @import "tailwindcss";
+
+.navbar-link {
+	position: relative;
+	display: block;
+	transition: color 300ms ease;
+}
+
+.navbar-link::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	content: "";
+	pointer-events: none;
+	background-color: #6db8d3;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 300ms ease-out;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus-visible::after {
+	transform: scaleX(1);
+}
+
+.carousel-scrollbar-hidden {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.carousel-scrollbar-hidden::-webkit-scrollbar {
+	display: none;
+}
+
+@keyframes modal-backdrop-enter {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modal-panel-enter {
+	from {
+		opacity: 0;
+		transform: translateY(1rem) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.modal-backdrop-enter {
+	animation: modal-backdrop-enter 220ms ease-out both;
+}
+
+.modal-panel-enter {
+	animation: modal-panel-enter 260ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.modal-backdrop-enter,
+	.modal-panel-enter {
+		animation: none;
+	}
+}
