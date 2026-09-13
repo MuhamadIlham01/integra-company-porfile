@@ -1,45 +1,43 @@
+import { Link } from "react-router";
+
 export default function Hero() {
   return (
-    <div className="bg-gray-900 min-h-screen flex items-center justify-center">
-      <div className="relative isolate px-6 pt-14 lg:px-8 w-full">
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-          />
-        </div>
+    <section className="relative isolate overflow-hidden bg-[#071827]">
+      {/* Overlay gradient dekoratif (opsional, biar ga flat) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 80%, rgba(31,92,140,0.35) 0%, transparent 55%), radial-gradient(circle at 85% 15%, rgba(109,184,211,0.18) 0%, transparent 50%)",
+        }}
+      />
 
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-              Machine you can trust, for the future you want.
-            </h1>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
-            </p>
+      <div className="mx-auto flex min-h-120 max-w-7xl items-end px-6 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28">
+        <div className="max-w-3xl text-white">
+          <p className="text-xs font-semibold tracking-[0.24em] text-[#6DB8D3]">
+            PT INTEGRA MESIN GLOBAL
+          </p>
+          <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
+            Mesin Industri Andal untuk Produksi Tanpa Henti.
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#F5F7F9] sm:text-lg">
+            Mitra pengadaan mesin fabrikasi logam terpercaya di Indonesia — dari
+            cutting, forming, punching, hingga finishing. Legalitas impor
+            lengkap, garansi resmi, dan dukungan purna jual lokal.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-3">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#1F5C8C] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0D2C5A] focus:outline-none focus:ring-4 focus:ring-[#6DB8D3]/40"
+            >
+              Lihat Katalog Mesin
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
-
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
-          />
-        </div>
       </div>
-    </div>
+    </section>
   );
 }
