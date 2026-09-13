@@ -62,7 +62,7 @@ const Products = () => {
           onSelect={setSelectedProduct}
         />
 
-        <section className="border-y border-gray-200 bg-[#F5F7F9]">
+        <section className="mx-auto max-w-7xl border-y border-[#6DB8D3]/40 bg-[#F5F7F9]">
           <div className="mx-auto max-w-7xl px-6 py-8 sm:px-8 lg:px-10">
             <div
               className="flex gap-2 overflow-x-auto pb-1"
@@ -93,7 +93,7 @@ const Products = () => {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl bg-[#F5F7F9] px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+        <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 bg-[#F5F7F9] px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
           <div className="mb-10 flex items-end justify-between gap-6 sm:mb-12">
             <div>
               <p className="text-sm font-medium text-gray-500">
@@ -152,8 +152,9 @@ const Products = () => {
           )}
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-10 lg:pb-28">
-          <div className="flex flex-col justify-between gap-8 rounded-2xl bg-[#0D2C5A] px-7 py-10 text-white sm:px-10 sm:py-12 lg:flex-row lg:items-center lg:px-14">
+        <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+            <div className="flex flex-col justify-between gap-8 rounded-2xl bg-[#0D2C5A] px-7 py-10 text-white sm:px-10 sm:py-12 lg:flex-row lg:items-center lg:px-14">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
                 Butuh Bantuan Memilih Mesin yang Tepat?
@@ -168,6 +169,7 @@ const Products = () => {
             >
               Hubungi Kami <span aria-hidden="true">→</span>
             </Link>
+            </div>
           </div>
         </section>
       </main>

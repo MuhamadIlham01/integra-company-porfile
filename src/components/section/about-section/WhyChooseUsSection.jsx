@@ -29,7 +29,7 @@ const reasons = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+    <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <p className="text-xs font-semibold tracking-[0.24em] text-[#1F5C8C]">

@@ -16,8 +16,7 @@ const AboutHeader = () => {
             TENTANG KAMI
           </p>
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-            Menjembatani Industri Fabrikasi Logam dengan Teknologi Presisi
-            Dunia.
+            Menghadirkan Teknologi Presisi untuk Industri.
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-gray-100 sm:text-lg">
             PT Integra Mesin Global — mitra B2B machine sourcing yang

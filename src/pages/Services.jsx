@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <div>
       <NavBar />
-      <main className="min-h-screen text-gray-900">
+      <main className="min-h-screen bg-[#F5F7F9] text-gray-900">
         <section
           className="relative isolate overflow-hidden bg-cover bg-center"
           style={{ backgroundImage: `url(${servicesHero})` }}
@@ -31,7 +31,7 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="bg-[#F5F7F9]">
+        <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 bg-[#F5F7F9]">
           <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
             <div className="mb-10 flex items-end justify-between gap-6 sm:mb-12">
               <div>
@@ -55,8 +55,8 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="bg-[#F5F7F9]">
-          <div className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10 lg:pb-28 ">
+        <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 bg-[#F5F7F9] py-16 sm:py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="flex flex-col justify-between gap-8 rounded-2xl bg-[#0D2C5A] px-7 py-10 text-white sm:px-10 sm:py-12 lg:flex-row lg:items-center lg:px-14">
               <div>
                 <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">

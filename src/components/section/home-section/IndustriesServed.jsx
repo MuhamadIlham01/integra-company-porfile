@@ -2,17 +2,17 @@ import { Building2, Droplets, Home, Car } from "lucide-react";
 
 const IndustryCard = ({ icon, title, description, applications }) => {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-cyan-400 group">
-      <div className="w-14 h-14 bg-cyan-50 rounded-lg flex items-center justify-center text-cyan-500 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300 mb-4">
+    <div className="group rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#6DB8D3] hover:shadow-xl">
+      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-[#F5F7F9] text-[#1F5C8C] transition-all duration-300 group-hover:bg-[#1F5C8C] group-hover:text-white">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-navy-700 mb-2">{title}</h3>
-      <p className="text-sm text-slate-600 mb-3">{description}</p>
+      <h3 className="mb-2 text-lg font-semibold text-[#0D2C5A]">{title}</h3>
+      <p className="mb-3 text-sm text-gray-600">{description}</p>
       <div className="flex flex-wrap gap-1.5">
         {applications.map((app, idx) => (
           <span
             key={idx}
-            className="text-xs bg-gray-100 text-slate-600 px-2.5 py-1 rounded-full"
+            className="rounded-full bg-[#F5F7F9] px-2.5 py-1 text-xs text-gray-600"
           >
             {app}
           </span>
@@ -63,22 +63,22 @@ const IndustriesServed = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="text-cyan-500 font-semibold text-sm uppercase tracking-wider">
+    <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 bg-[#F5F7F9]">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+        <div className="mb-10 text-left sm:mb-12">
+          <span className="text-xs font-semibold tracking-[0.24em] text-[#1F5C8C]">
             Industri yang Didukung
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mt-2 mb-4">
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#0D2C5A] sm:text-3xl">
             Sektor Manufaktur yang Kami Layani
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl text-sm leading-6 text-gray-600 sm:text-base">
             Lini mesin kami dirancang untuk memenuhi standar produksi berbagai
             sektor industri manufaktur.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((industry, index) => (
             <IndustryCard
               key={index}

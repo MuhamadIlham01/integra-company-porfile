@@ -107,7 +107,7 @@ const ProductShowcaseCarousel = ({ products, onSelect }) => {
 
   return (
     <section
-      className="border-y border-[#A8B4BE]/25 bg-[#F5F7F9]"
+      className="mx-auto max-w-7xl border-y border-[#6DB8D3]/40 bg-[#F5F7F9]"
       aria-labelledby="showcase-heading"
     >
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">

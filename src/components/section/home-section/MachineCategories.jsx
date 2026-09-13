@@ -138,22 +138,22 @@ const MachineCategories = () => {
     categories.find((cat) => cat.id === activeCategory)?.machines || [];
 
   return (
-    <section className="py-16 md:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="text-cyan-500 font-semibold text-sm uppercase tracking-wider">
+    <section className="bg-[#F5F7F9]">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+        <div className="mb-10 text-left sm:mb-12">
+          <span className="text-xs font-semibold tracking-[0.24em] text-[#1F5C8C]">
             Lini Produk
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mt-2 mb-4">
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#0D2C5A] sm:text-3xl">
             Mesin Fabrikasi Logam & Sheet Metal
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl text-sm leading-6 text-gray-600 sm:text-base">
             Pilih kategori mesin sesuai kebutuhan produksi Anda dari 4 lini
             utama proses fabrikasi.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="mb-8 flex flex-wrap justify-center gap-2">
           {categories.map((category) => {
             const isActive = activeCategory === category.id;
             return (
@@ -163,14 +163,14 @@ const MachineCategories = () => {
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 ${
                   isActive
-                    ? "bg-[#1e3a5f] text-white shadow-md hover:bg-[#1e3a5f] active:bg-[#162c48]"
-                    : "bg-gray-100 text-slate-600 hover:bg-gray-200 hover:text-slate-700 active:bg-gray-300"
+                    ? "bg-[#0D2C5A] text-white shadow-md hover:bg-[#1F5C8C] active:bg-[#0D2C5A]"
+                    : "bg-white text-gray-600 hover:bg-[#F5F7F9] hover:text-[#0D2C5A] active:bg-gray-100"
                 }`}
               >
-                <span className={isActive ? "text-white" : "text-slate-600"}>
+                <span className={isActive ? "text-white" : "text-[#1F5C8C]"}>
                   {category.icon}
                 </span>
-                <span className={isActive ? "text-white" : "text-slate-600"}>
+                <span className={isActive ? "text-white" : "text-[#0D2C5A]"}>
                   {category.label}
                 </span>
               </button>
@@ -178,32 +178,32 @@ const MachineCategories = () => {
           })}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {activeMachines.map((machine) => (
             <div
               key={machine.id}
-              className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-cyan-400 hover:shadow-lg transition-all duration-300 group"
+              className="group rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#6DB8D3] hover:shadow-lg"
             >
               <div className="flex items-start justify-between mb-3">
-                <span className="text-xs font-semibold text-cyan-600 bg-cyan-50 px-3 py-1 rounded-full">
+                <span className="rounded-full bg-[#F5F7F9] px-3 py-1 text-xs font-semibold text-[#1F5C8C]">
                   {machine.category}
                 </span>
               </div>
-              <h3 className="text-lg font-semibold text-navy-700 mb-3">
+              <h3 className="mb-3 text-lg font-semibold text-[#0D2C5A]">
                 {machine.name}
               </h3>
               <ul className="space-y-1.5 mb-4">
                 {machine.specs.map((spec, idx) => (
                   <li
                     key={idx}
-                    className="text-sm text-slate-600 flex items-start gap-2"
+                    className="flex items-start gap-2 text-sm text-gray-600"
                   >
-                    <span className="text-cyan-500 mt-0.5">•</span>
+                    <span className="mt-0.5 text-[#1F5C8C]">•</span>
                     <span>{spec}</span>
                   </li>
                 ))}
               </ul>
-              <button className="inline-flex items-center gap-1 text-cyan-600 font-medium text-sm hover:text-cyan-700 transition-colors">
+              <button className="inline-flex items-center gap-1 text-sm font-medium text-[#1F5C8C] transition-colors hover:text-[#0D2C5A]">
                 Konsultasi Spesifikasi & Kuotasi
                 <ChevronRight size={16} />
               </button>
