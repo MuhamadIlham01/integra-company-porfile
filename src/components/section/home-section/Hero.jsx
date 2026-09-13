@@ -1,17 +1,13 @@
 import { Link } from "react-router";
+import heroImage from "../../../assets/hero-home.jpg"; // sesuaikan path & nama file
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#071827]">
-      {/* Overlay gradient dekoratif (opsional, biar ga flat) */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 80%, rgba(31,92,140,0.35) 0%, transparent 55%), radial-gradient(circle at 85% 15%, rgba(109,184,211,0.18) 0%, transparent 50%)",
-        }}
-      />
+    <section
+      className="relative isolate overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      <div className="absolute inset-0 -z-10 bg-[#071827]/70" />
 
       <div className="mx-auto flex min-h-120 max-w-7xl items-end px-6 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28">
         <div className="max-w-3xl text-white">
@@ -34,6 +30,12 @@ export default function Hero() {
             >
               Lihat Katalog Mesin
               <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus:ring-4 focus:ring-white/30"
+            >
+              Konsultasi Gratis
             </Link>
           </div>
         </div>
