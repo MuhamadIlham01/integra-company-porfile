@@ -27,8 +27,9 @@ const Footer = () => {
             </Link>
 
             <p className="max-w-xs text-sm leading-6 text-[#A8B4BE]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Mitra pengadaan mesin fabrikasi logam terpercaya di Indonesia —
+              dari cutting, forming, punching, hingga finishing. Legalitas impor
+              lengkap, garansi resmi, dan dukungan purna jual lokal.
             </p>
           </div>
 
@@ -85,8 +86,8 @@ const Footer = () => {
 
             <ul className="mt-6 space-y-4">
               <li className="text-base text-[#A8B4BE]">
-                Ruko niaga Kalimas jl.inspeksi saluran Kalimalang blok B18
-                Jatimulya ,kec Tambun Selatan kab.bekasi ,Jawa Barat 1751
+                Ruko Niaga Kalimas Jl.inspeksi saluran Kalimalang Blok B18
+                Jatimulya, Kec Tambun Selatan Kab.bekasi, Jawa Barat 1751
               </li>
 
               <li>
