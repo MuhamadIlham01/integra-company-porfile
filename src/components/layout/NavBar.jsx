@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+import { MessageCircle } from "lucide-react";
 import logo from "../../assets/logo.jpeg";
 
 const navItems = [
@@ -63,9 +64,12 @@ const NavBar = () => {
         <div className="flex md:order-2 space-x-3 md:space-x-0">
           <NavLink
             to="/contact"
-            className="text-white bg-[#1F5C8C] hover:bg-[#0D2C5A] rounded-2xl cursor-pointer border border-transparent shadow-[0_6px_16px_rgba(13,44,90,0.18)] hover:shadow-[0_12px_28px_rgba(13,44,90,0.28)] hover:-translate-y-0.5 transition-all duration-300 ease-out font-medium leading-5 rounded-base text-sm px-6 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            className="inline-flex h-10 items-center justify-center rounded-2xl bg-[#1F5C8C] px-3 text-sm font-medium leading-5 text-white shadow-[0_6px_16px_rgba(13,44,90,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#0D2C5A] hover:shadow-[0_12px_28px_rgba(13,44,90,0.28)] focus:outline-none focus:ring-4 focus:ring-blue-300 md:px-6"
+            aria-label="Hubungi Kami"
+            title="Hubungi Kami"
           >
-            Hubungi Kami
+            <MessageCircle aria-hidden="true" className="h-5 w-5 md:hidden" />
+            <span className="hidden md:inline">Hubungi Kami</span>
           </NavLink>
 
           <button

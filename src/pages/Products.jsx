@@ -56,7 +56,7 @@ const Products = () => {
           style={{ backgroundImage: `url(${productsHero})` }}
         >
           <div className="absolute inset-0 -z-10 bg-[#071827]/70" />
-          <div className="mx-auto flex min-h-120 max-w-7xl items-end px-6 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28">
+          <div className="mx-auto flex min-h-120 max-w-7xl items-end px-6 pb-20 pt-28 sm:px-8 sm:py-24 lg:px-10 lg:py-28">
             <div className="max-w-3xl text-white">
               <p className="text-xs font-semibold tracking-[0.24em] text-orange-200">
                 PRODUK KAMI
