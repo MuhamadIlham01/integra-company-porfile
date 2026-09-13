@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Scissors, Hammer, Drill, SprayCan, ChevronRight } from "lucide-react";
 
 const MachineCategories = () => {

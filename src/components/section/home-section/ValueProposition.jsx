@@ -1,4 +1,3 @@
-import React from "react";
 import { Factory, Shield, CheckCircle, Headset } from "lucide-react";
 
 const ValueCard = ({ icon, title, description }) => {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Building2, Droplets, Home, Car } from "lucide-react";
 
 const IndustryCard = ({ icon, title, description, applications }) => {

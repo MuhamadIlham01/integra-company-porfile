@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
 
 const QuotationBanner = () => {
