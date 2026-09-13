@@ -1,16 +1,19 @@
 import Footer from "../components/layout/Footer";
-import NavBar from "../components/layout/NavBar"
+import AboutHeader from "../components/section/about-section/AboutHeader";
+import LegalProfileSection from "../components/section/about-section/LegalProfileSection";
+import VisionMissionSection from "../components/section/about-section/VisionMissionSection";
+import NavBar from "../components/layout/NavBar";
 
 const About = () => {
   return (
     <div>
       <NavBar />
-      <main className="min-h-screen">
-        {/* page content */}
-      </main>
+      <AboutHeader />
+      <LegalProfileSection />
+      <VisionMissionSection />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default About;
