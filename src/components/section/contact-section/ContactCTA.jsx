@@ -3,8 +3,9 @@ import { ArrowRight } from "lucide-react";
 
 const ContactCTA = () => {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-10 lg:pb-28">
-      <div className="flex flex-col justify-between gap-8 rounded-2xl bg-[#0D2C5A] px-7 py-10 text-white sm:px-10 sm:py-12 lg:flex-row lg:items-center lg:px-14">
+    <section className="mx-auto max-w-7xl border-t border-[#6DB8D3]/40 bg-[#F5F7F9] py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+        <div className="flex flex-col justify-between gap-8 rounded-2xl bg-[#0D2C5A] px-7 py-10 text-white sm:px-10 sm:py-12 lg:flex-row lg:items-center lg:px-14">
         <div>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Belum Yakin Mesin Apa yang Dibutuhkan?
@@ -27,6 +28,7 @@ const ContactCTA = () => {
           >
             Lihat Layanan
           </Link>
+        </div>
         </div>
       </div>
     </section>

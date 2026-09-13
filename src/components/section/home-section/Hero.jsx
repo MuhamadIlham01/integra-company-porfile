@@ -28,7 +28,7 @@ export default function Hero() {
               to="/products"
               className="inline-flex items-center gap-2 rounded-xl bg-[#1F5C8C] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0D2C5A] focus:outline-none focus:ring-4 focus:ring-[#6DB8D3]/40"
             >
-              Lihat Katalog Mesin
+              Lihat Katalog
               <span aria-hidden="true">→</span>
             </Link>
           </div>
