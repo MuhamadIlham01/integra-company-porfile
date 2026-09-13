@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router";
 import Footer from "../components/layout/Footer";
@@ -10,17 +10,32 @@ import products from "../data/products";
 import productsHero from "../assets/products.jpeg";
 
 const categories = ["ALL", "CUTTING", "FORMING", "PUNCHING", "FINISHING"];
-const productsPerPage = 6;
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isMobile, setIsMobile] = useState(() =>
+    window.matchMedia("(max-width: 639px)").matches,
+  );
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 639px)");
+    const handleViewportChange = (event) => {
+      setIsMobile(event.matches);
+      setCurrentPage(1);
+    };
+
+    mobileQuery.addEventListener("change", handleViewportChange);
+
+    return () => mobileQuery.removeEventListener("change", handleViewportChange);
+  }, []);
 
   const visibleProducts =
     selectedCategory === "ALL"
       ? products
       : products.filter((product) => product.category === selectedCategory);
+  const productsPerPage = isMobile ? 3 : 6;
   const totalPages = Math.ceil(visibleProducts.length / productsPerPage);
   const paginatedProducts = visibleProducts.slice(
     (currentPage - 1) * productsPerPage,
