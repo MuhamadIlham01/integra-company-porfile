@@ -314,9 +314,9 @@ const ContactBox = () => {
               Jam Operasional
             </p>
             <p className="mt-1 text-xs leading-5 text-gray-600">
-              Senin–Jumat: 08.00–17.00 WIB
+              Senin–Jumat: 08.00 – 17.00 WIB
               <br />
-              Sabtu: 08.00–13.00 WIB
+              Weekend & Tanggal Merah: 08.00 – 13.00 WIB
             </p>
           </div>
         </div>
