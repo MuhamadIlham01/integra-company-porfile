@@ -31,12 +31,6 @@ export default function Hero() {
               Lihat Katalog Mesin
               <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus:ring-4 focus:ring-white/30"
-            >
-              Konsultasi Gratis
-            </Link>
           </div>
         </div>
       </div>
