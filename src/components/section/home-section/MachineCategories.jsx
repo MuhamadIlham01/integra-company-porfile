@@ -104,7 +104,7 @@ const MachineCategories = () => {
       machines: [
         {
           id: "finishing-1",
-          name: "ATmac Hydraulic Shearing Machine",
+          name: "Hydraulic Shearing Machine",
           specs: [
             "QC11Y Series",
             "Sertifikasi CE TüV Jerman",
@@ -154,20 +154,28 @@ const MachineCategories = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === category.id
-                  ? "bg-navy-700 text-white shadow-md"
-                  : "bg-gray-100 text-slate-600 hover:bg-gray-200"
-              }`}
-            >
-              {category.icon}
-              {category.label}
-            </button>
-          ))}
+          {categories.map((category) => {
+            const isActive = activeCategory === category.id;
+            return (
+              <button
+                key={category.id}
+                type="button"
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 ${
+                  isActive
+                    ? "bg-[#1e3a5f] text-white shadow-md hover:bg-[#1e3a5f] active:bg-[#162c48]"
+                    : "bg-gray-100 text-slate-600 hover:bg-gray-200 hover:text-slate-700 active:bg-gray-300"
+                }`}
+              >
+                <span className={isActive ? "text-white" : "text-slate-600"}>
+                  {category.icon}
+                </span>
+                <span className={isActive ? "text-white" : "text-slate-600"}>
+                  {category.label}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

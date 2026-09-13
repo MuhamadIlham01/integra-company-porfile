@@ -1,19 +1,20 @@
-import React from "react";
 import { ClipboardList, Search, Package, Truck, Settings } from "lucide-react";
 
 const Step = ({ number, title, description, icon, isLast }) => {
   return (
     <div className="flex-1 relative">
       <div className="flex flex-col items-center">
-        <div className="relative">
-          <div className="w-16 h-16 bg-navy-700 rounded-full flex items-center justify-center text-white z-10 relative">
-            {icon}
-          </div>
+        <div className="relative w-full flex justify-center">
+          {/* Garis penghubung - posisi di tengah ikon */}
           {!isLast && (
-            <div className="hidden lg:block absolute top-1/2 left-full w-full h-0.5 bg-gray-300 -translate-y-1/2 z-0">
+            <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 z-0">
               <div className="w-3 h-3 bg-cyan-500 rounded-full absolute -right-1.5 top-1/2 -translate-y-1/2"></div>
             </div>
           )}
+          {/* Ikon */}
+          <div className="w-16 h-16 bg-navy-700 rounded-full flex items-center justify-center text-white z-10 relative">
+            {icon}
+          </div>
         </div>
         <div className="mt-4 text-center max-w-45">
           <span className="text-xs font-bold text-cyan-500">

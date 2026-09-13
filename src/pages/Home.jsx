@@ -16,7 +16,6 @@ const Home = () => {
       <IndustriesServed />
       <MachineCategories />
       <SourcingWorkflow />
-      <IndustriesServed />
       <QuotationBanner />
       <Footer />
     </div>

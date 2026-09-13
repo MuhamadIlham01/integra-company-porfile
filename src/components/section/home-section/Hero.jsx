@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function Hero() {
   return (
     <div className="bg-gray-900 min-h-screen flex items-center justify-center">
@@ -17,7 +15,6 @@ export default function Hero() {
           />
         </div>
 
-        {/* Konten utama hero */}
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">

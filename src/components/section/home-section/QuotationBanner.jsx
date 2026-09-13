@@ -17,7 +17,7 @@ const QuotationBanner = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const message = `Halo PT Integra Mesin Global,%0A%0ASaya ingin konsultasi pengadaan mesin:%0A%0ANama PIC: ${formData.name}%0APerusahaan: ${formData.company}%0AKategori Mesin: ${formData.category}%0ACatatan Kebutuhan: ${formData.notes}%0A%0ATerima kasih.`;
-    const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
+    const whatsappUrl = `https://wa.me/6287852183175?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -40,15 +40,15 @@ const QuotationBanner = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-white">
                 <Phone size={18} className="text-cyan-400" />
-                <span className="text-sm">+62 812 3456 7890</span>
+                <span className="text-sm">+62 878 5218 3175</span>
               </div>
               <div className="flex items-center gap-3 text-white">
                 <Mail size={18} className="text-cyan-400" />
-                <span className="text-sm">info@integramesin.co.id</span>
+                <span className="text-sm">integramesinglobal@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-white">
                 <MapPin size={18} className="text-cyan-400" />
-                <span className="text-sm">Jakarta, Indonesia</span>
+                <span className="text-sm">Bekasi, Indonesia</span>
               </div>
             </div>
           </div>

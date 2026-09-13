@@ -1,3 +1,4 @@
+// VisionMissionSection.jsx
 import { Eye, Target } from "lucide-react";
 import VisionMissionCard from "./VisionMissionCard";
 
@@ -26,7 +27,7 @@ const VisionMissionSection = () => {
   return (
     <section
       aria-label="Visi dan Misi"
-      className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+      className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch"
     >
       {items.map((item) => (
         <VisionMissionCard key={item.type} {...item} />
